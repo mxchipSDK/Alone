@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <EditText
+        android:id="@+id/mdnsserv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="输入mdns服务名称"
+        android:text="_easylink._tcp.local." >
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" >
+
+        <Button
+            android:id="@+id/startmdns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/buttonbg"
+            android:text="搜索设备"
+            android:textColor="@color/buttontxt" />
+
+        <Button
+            android:id="@+id/stopmdns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/buttonbg1"
+            android:text="停止搜索"
+            android:textColor="@color/buttontxt" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:id="@+id/showdev"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="" />
+    </ScrollView>
+
+</LinearLayout>

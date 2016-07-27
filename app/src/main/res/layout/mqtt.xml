@@ -1,0 +1,310 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp" >
+
+        <LinearLayout
+            android:id="@+id/configll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="HOST"
+                    android:textColor="@color/buttonbg1"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/hostet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="host"
+                    android:text="@string/host"
+                    android:textSize="14dp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="PORT"
+                    android:textColor="@color/buttonbg1"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/portet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="port"
+                    android:text="@string/port"
+                    android:textSize="14dp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="USERNAME"
+                    android:textColor="@color/buttonbg1"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/userNameet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="userName"
+                    android:text="@string/username"
+                    android:textSize="14dp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="PASSWORD"
+                    android:textColor="@color/buttonbg1"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/passWordet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="passWord"
+                    android:text="@string/password"
+                    android:textSize="14dp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="TOPIC"
+                    android:textColor="@color/buttonbg1"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/topicet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="topic"
+                    android:text="@string/topic"
+                    android:textSize="14dp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="CLIENTID"
+                    android:textColor="@color/buttonbg1"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/clientIDet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="clientID"
+                    android:text="@string/clientid"
+                    android:textSize="14dp" >
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" >
+
+            <Button
+                android:id="@+id/startmqtt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonbg"
+                android:text="启动MQTT"
+                android:textColor="@color/buttontxt" />
+
+            <Button
+                android:id="@+id/stopmqtt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonbg1"
+                android:text="停止MQTT"
+                android:textColor="@color/buttontxt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="ADDTOPIC"
+                android:textColor="@color/buttonbg1"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/addtopicet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="addtopic"
+                android:text="@string/addtopic"
+                android:textSize="14dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" >
+
+            <Button
+                android:id="@+id/addsubscrib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonbg"
+                android:text="增加订阅"
+                android:textColor="@color/buttontxt" />
+
+            <Button
+                android:id="@+id/unsubscrib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonbg1"
+                android:text="移除订阅"
+                android:textColor="@color/buttontxt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="TOPIC"
+                android:textColor="@color/buttonbg1"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/sendtopicet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="sendtopic"
+                android:text="@string/sendtopic"
+                android:textSize="14dp" >
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="COMMAND"
+                android:textColor="@color/buttonbg1"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/commandet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="command"
+                android:text="@string/cmdredlight"
+                android:textSize="14dp" >
+            </EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" >
+
+            <Button
+                android:id="@+id/publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonbg"
+                android:text="发送指令"
+                android:textColor="@color/buttontxt" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/logview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="" />
+    </LinearLayout>
+
+</ScrollView>

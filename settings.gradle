@@ -1,0 +1,6 @@
+include ':app'
+include ':FogSDK'
+project (':FogSDK').projectDir = new File('../FogSDK/')
+include ':FogSDK:easylink'
+include ':FogSDK:fog_mdns'
+include ':FogSDK:fog_mqtt'
