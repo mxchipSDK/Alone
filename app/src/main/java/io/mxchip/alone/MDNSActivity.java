@@ -63,7 +63,7 @@ public class MDNSActivity extends AppCompatActivity {
                 mdns.startSearchDevices(serviceInfo,
                         new SearchDeviceCallBack() {
                             @Override
-                            public void onDevicesFind(JSONArray deviceStatus) {
+                            public void onDevicesFind(int code, JSONArray deviceStatus) {
                                 if (!deviceStatus.equals("")) {
                                     Log.d("---mdns---", deviceStatus.toString());
 
@@ -76,17 +76,19 @@ public class MDNSActivity extends AppCompatActivity {
 
                             @Override
                             public void onFailure(int code, String message) {
+                                Log.d("---mdns---", code + message);
                                 Message msg = new Message();
                                 msg.what = 1;
-                                msg.obj = message.toString() + "\r\n";
+                                msg.obj = code +  message.toString() + "\r\n";
                                 myhandler.sendMessage(msg);
                             }
 
                             @Override
-                            public void onSuccess(String message) {
+                            public void onSuccess(int code, String message) {
+                                Log.d("---mdns---", code + message);
                                 Message msg = new Message();
                                 msg.what = 1;
-                                msg.obj = message.toString() + "\r\n";
+                                msg.obj = code + message.toString() + "\r\n";
                                 myhandler.sendMessage(msg);
                             }
                         });
@@ -97,7 +99,8 @@ public class MDNSActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mdns.stopSearchDevices(new SearchDeviceCallBack() {
-                    public void onSuccess(String message) {
+                    public void onSuccess(int code, String message) {
+                        Log.d("---mdns---", code + message);
                         Message msg = new Message();
                         msg.what = 1;
                         msg.obj = message + "\r\n";
@@ -106,6 +109,7 @@ public class MDNSActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(int code, String message) {
+                        Log.d("---mdns---", code + message);
                         Message msg = new Message();
                         msg.what = 1;
                         msg.obj = message.toString() + "\r\n";

@@ -1,20 +1,21 @@
 <resources>
-    <string name="app_name">Alone</string>
+    <string name="app_name">EasyLink3.3</string>
     <string name="action_settings">Settings</string>
 
+    <string name="host">cilinesp.fogcloud.io</string>
     <!--<string name="host">v2.fogcloud.io</string>-->
-    <!--<string name="port">1883</string>-->
-    <!--<string name="username">a015e6d6-1d6e-11e6-a739-00163e0204c0</string>-->
-    <!--<string name="password">123456</string>-->
-    <!--<string name="topic">d2c/aa2dde14-0b8d-11e6-a739-00163e0204c0/status</string>-->
-    <!--<string name="clientid">a015e6d6-1d6e-11e6-a739-00163e0204c0</string>-->
-
-    <string name="host">api.easylink.io</string>
     <string name="port">1883</string>
-    <string name="username">admin</string>
-    <string name="password">admin</string>
-    <string name="topic">d64f517c/c8934691813c/out/read</string>
-    <string name="clientid">clientId-sin20160628</string>
+    <string name="username">a015e6d6-1d6e-11e6-a739-00163e0204c0</string>
+    <string name="password">123456</string>
+    <string name="topic">d2c/aa2dde14-0b8d-11e6-a739-00163e0204c0/status</string>
+    <string name="clientid">a015e6d6-1d6e-11e6-a739-00163e0204c0</string>
+
+    <!--<string name="host">api.easylink.io</string>-->
+    <!--<string name="port">1883</string>-->
+    <!--<string name="username">admin</string>-->
+    <!--<string name="password">admin</string>-->
+    <!--<string name="topic">d64f517c/c8934691813c/out/read</string>-->
+    <!--<string name="clientid">clientId-sin20160628</string>-->
 
     <string name="addtopic">d64f517c/c8934691813c/in/write</string>
     <string name="sendtopic">d64f517c/c8934691813c/in/write</string>

@@ -59,7 +59,30 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发包频率"
+            android:text="发包时间(ms)"
+            android:textColor="@color/buttonbg1"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/runtimesid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="EasyLink运行时间"
+            android:text="60000"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发包频率(ms)"
             android:textColor="@color/buttonbg1"
             android:textSize="14dp" />
 
@@ -88,8 +111,8 @@
             android:id="@+id/extrainfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="额外字段"
-            android:text="mysin"
+            android:hint="可为空"
+            android:text=""
             android:textSize="14dp" />
     </LinearLayout>
     <LinearLayout
@@ -109,8 +132,8 @@
             android:id="@+id/rc4key"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="RC4Key"
-            android:text="123456789"
+            android:hint="可为空"
+            android:text=""
             android:textSize="14dp" />
     </LinearLayout>
 

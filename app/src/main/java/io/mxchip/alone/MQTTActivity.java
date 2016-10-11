@@ -110,12 +110,12 @@ public class MQTTActivity extends AppCompatActivity implements View.OnClickListe
                 ldp.passWord = passWordet.getText().toString().trim();
                 ldp.topic = topicet.getText().toString().trim();
                 ldp.clientID = clientIDet.getText().toString().trim();
-                ldp.isencrypt = false;
+//                ldp.isencrypt = false;
 
-                mqttapi.startListenDevice(ldp, new ListenDeviceCallBack() {
+                mqttapi.startMqtt(ldp, new ListenDeviceCallBack() {
                     @Override
-                    public void onSuccess(String message) {
-                        Log.d("---", message);
+                    public void onSuccess(int code, String message) {
+                        Log.d("---", code + message);
                         configll.setVisibility(View.GONE);
                         sendMSGH(message);
                     }
@@ -134,10 +134,10 @@ public class MQTTActivity extends AppCompatActivity implements View.OnClickListe
                 });
                 break;
             case R.id.stopmqtt:
-                mqttapi.stopListenDevice(new ListenDeviceCallBack() {
+                mqttapi.stopMqtt(new ListenDeviceCallBack() {
                     @Override
-                    public void onSuccess(String message) {
-                        Log.d("---", message);
+                    public void onSuccess(int code, String message) {
+                        Log.d("---", code + message);
                         configll.setVisibility(View.VISIBLE);
                         sendMSGH(message);
                     }
@@ -152,11 +152,11 @@ public class MQTTActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.publish:
                 String sendtopic = sendtopicet.getText().toString().trim();
                 String command = commandet.getText().toString().trim();
-                mqttapi.sendCommand(sendtopic, command, 0, false,
+                mqttapi.publish(sendtopic, command, 0, false,
                         new ListenDeviceCallBack() {
                             @Override
-                            public void onSuccess(String message) {
-                                Log.d("---", message);
+                            public void onSuccess(int code, String message) {
+                                Log.d("---", code + message);
                                 sendMSGH(message);
                             }
 
@@ -169,10 +169,10 @@ public class MQTTActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.addsubscrib:
                 String addtopic = addtopicet.getText().toString().trim();
-                mqttapi.addDeviceListener(addtopic, 0, new ListenDeviceCallBack() {
+                mqttapi.subscribe(addtopic, 0, new ListenDeviceCallBack() {
                     @Override
-                    public void onSuccess(String message) {
-                        Log.d("---", message);
+                    public void onSuccess(int code, String message) {
+                        Log.d("---", code + message);
                         sendMSGH(message);
                     }
 
@@ -185,10 +185,10 @@ public class MQTTActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.unsubscrib:
                 String rmtopic = addtopicet.getText().toString().trim();
-                mqttapi.removeDeviceListener(rmtopic, new ListenDeviceCallBack() {
+                mqttapi.unsubscribe(rmtopic, new ListenDeviceCallBack() {
                     @Override
-                    public void onSuccess(String message) {
-                        Log.d("---", message);
+                    public void onSuccess(int code, String message) {
+                        Log.d("---", code + message);
                         sendMSGH(message);
                     }
 
