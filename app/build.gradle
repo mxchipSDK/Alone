@@ -24,13 +24,11 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.1.1'
 
-//    compile 'io.fogcloud.sdk:easylink:0.1.1'
-//    compile 'io.fogcloud.sdk:fog_mdns:0.1.1'
-//    compile 'io.fogcloud.sdk:fog_mqtt:0.1.1'
+    compile 'io.fogcloud.sdk:easylink:0.1.1'
+    compile 'io.fogcloud.sdk:fog_mdns:0.1.2'
+    compile 'io.fogcloud.sdk:fog_mqtt:0.2.0'
 
-//    compile 'io.fogcloud.sdk:fog_mqtt:0.2.0'
-
-    compile project(':FogSDK:easylink')
-    compile project(':FogSDK:fog_mdns')
-    compile project(':FogSDK:fog_mqtt')
+//    compile project(':FogSDK:easylink')
+//    compile project(':FogSDK:fog_mdns')
+//    compile project(':FogSDK:fog_mqtt')
 }
